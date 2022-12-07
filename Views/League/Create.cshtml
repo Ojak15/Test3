@@ -1,0 +1,24 @@
+﻿@using Test2.ViewModels
+@model CreateLeagueViewModel
+
+
+
+<form method="post" asp-action="Create">
+    <input type="hidden" id="BasketballNiId" name="BasketballNiId" asp-for="BasketballNiId" />
+    <div class="form-group">
+        <label asp-for="Leaguename">HomeTeam</label>
+        <input asp-for="Leaguename" class="form-control" placeholder="Enter email">
+        <span asp-validation-for="Leaguename" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="LeagueDescription">Homescore</label>
+        <input asp-for="LeagueDescription" class="form-control" placeholder="Enter email">
+        <span asp-validation-for="LeagueDescription" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Level">AwayTeam</label>
+        <input asp-for="Level" class="form-control" placeholder="Enter email">
+        <span asp-validation-for="Level" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
